@@ -24,7 +24,7 @@ public class Ranking {
 	        double pd=td/10000; 
 	        return new double[] { p1, p2,pd };
 } 
-	 private static int getPossionVariable(double lamda){//define Possion distribution£¿
+	 private static int getPossionVariable(double lamda){//define Possion distribution
 	        int x = 0;
 	        double y = Math.random(), cdf = getPossionProbability(x, lamda);
 	        while (cdf < y) {
