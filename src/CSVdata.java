@@ -33,12 +33,12 @@ public class CSVdata {
 				String[] team = line.split(cvsSplitBy);
 				teamStrings.add(team);
 
-				System.out.println("Hometeam" + team[0] +":" +team[2] +
-						", AwayTeam" + team[1] + ":"+team[3]);
+//				System.out.println("Hometeam" + team[0] +":" +team[2] +
+//						", AwayTeam" + team[1] + ":"+team[3]);
 
 			}
 			
-			System.out.println("");
+//			System.out.println("");
 
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
