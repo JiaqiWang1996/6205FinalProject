@@ -5,7 +5,7 @@ public class Ranking {
 
 	       
 	       
-	        int tg1=0,tg2=0,tw1=0,tw2=0;//tg=team goal,tw=team wins;
+	        int tg1=0,tg2=0,tw1=0,tw2=0,td=0;//tg=team goal,tw=team wins,td=team draw;
 	       for(int i=0;i<10000;i++)  // go on with the matched 10000times
 	       {
 	           
@@ -16,15 +16,15 @@ public class Ranking {
 	            }
 	           if (tg1 > tg2) {
 	                tw1++;//team1 wins,counter+1;
-	            } 
+	            }
+	           else {td++;}
 	    }
 	        double p1 = tw1 / 10000;
 	        double p2 = tw2 / 10000 ;
-	        double p=p1/(p1+p2);
-	        
-	        return new double[] { p1, p2 };
+	        double pd=td/10000; 
+	        return new double[] { p1, p2,pd };
 } 
-	 private static int getPossionVariable(double lamda){//先引用方法再填？
+	 private static int getPossionVariable(double lamda){//define Possion distribution？
 	        int x = 0;
 	        double y = Math.random(), cdf = getPossionProbability(x, lamda);
 	        while (cdf < y) {
