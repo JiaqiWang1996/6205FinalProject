@@ -17,7 +17,7 @@ import java.io.IOException;
 
 public class CSVdata {
 
-	public static void main(String[] args) {
+	public static void loadData() {
 
 		String csvFile = "EPL-standard.csv";
 		BufferedReader br = null;
@@ -31,11 +31,14 @@ public class CSVdata {
 
 				// use comma as separator
 				String[] team = line.split(cvsSplitBy);
+				teamStrings.add(team);
 
 				System.out.println("Hometeam" + team[0] +":" +team[2] +
 						", AwayTeam" + team[1] + ":"+team[3]);
 
 			}
+			
+			System.out.println("");
 
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
@@ -52,5 +55,10 @@ public class CSVdata {
 		}
 
 	}
+	
+	
+	
 
+	public static List<String[]> teamStrings = new ArrayList<String[]>();
 }
+ 
