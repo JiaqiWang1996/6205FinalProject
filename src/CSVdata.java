@@ -19,7 +19,7 @@ public class CSVdata {
 
 	public static void loadData() {
 
-		String csvFile = "EPL-standard.csv";
+		String csvFile = "EPL-standard.data.csv";
 		BufferedReader br = null;
 		String line = "";
 		String cvsSplitBy = ",";
